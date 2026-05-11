@@ -53,9 +53,9 @@ fadeEls.forEach(el => observer.observe(el));
 
 // ── Terminal typing animation ──────────────────────────────────────
 const queries = [
-  { q: 'What is our current hiring plan for Q3?',    r: 'Based on the Q3 roadmap (indexed Jul 12): Engineering is targeting 8 hires — 3 senior backend, 2 ML, 2 frontend, 1 DevOps. Budget approved. Recruiter briefed.' },
-  { q: 'Summarize last quarter\'s top support issues', r: 'Top 3 issues Q2: (1) SSO timeout — 34% of tickets, patch released Jun 18. (2) Export limits — 28%, roadmap item Q3. (3) Mobile perf — 18%, fix shipped Jul 2.' },
-  { q: 'Who owns the Acme account?',                  r: 'Acme Corp (ACV $240k) is owned by Sarah Chen (AE, West). CSM: James Park. Renewal: Oct 31. Last QBR: May 14 — rated Healthy. Next touchpoint scheduled Jun 3.' },
+  { q: 'What is our current hiring plan for Q3?',      r: 'Based on the Q3 roadmap (indexed Jul 12): Engineering is targeting 8 hires — 3 senior backend, 2 ML, 2 frontend, 1 DevOps. Budget approved. Recruiter briefed.' },
+  { q: 'Summarize last quarter\'s top support issues',  r: 'Top 3 issues Q2: (1) SSO timeout — 34% of tickets, patch released Jun 18. (2) Export limits — 28%, roadmap item Q3. (3) Mobile perf — 18%, fix shipped Jul 2.' },
+  { q: 'What are our onboarding steps for new hires?', r: 'Onboarding (indexed from HR handbook): Week 1 — IT setup, org overview, team intro. Week 2 — Role training. Week 3-4 — Shadowing + first project. All steps logged.' },
 ];
 
 let qIdx = 0;
@@ -91,6 +91,20 @@ const success = document.getElementById('form-success');
 
 form.addEventListener('submit', e => {
   e.preventDefault();
+  const name     = document.getElementById('name').value;
+  const company  = document.getElementById('company').value;
+  const email    = document.getElementById('email').value;
+  const size     = document.getElementById('size').value;
+  const interest = document.getElementById('interest').value;
+  const message  = document.getElementById('message').value;
+
+  const subject = encodeURIComponent(`Omniq Demo Request — ${company}`);
+  const body    = encodeURIComponent(
+    `Name: ${name}\nCompany: ${company}\nEmail: ${email}\nTeam Size: ${size}\nInterest: ${interest}\n\nMessage:\n${message}`
+  );
+
+  window.location.href = `mailto:sandeepvijayarao09@gmail.com?subject=${subject}&body=${body}`;
+
   form.style.display    = 'none';
   success.style.display = 'block';
 });
