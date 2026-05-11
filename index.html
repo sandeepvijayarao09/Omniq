@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Omniq — The AI platform every person in your organization actually uses. Zero data leaks. Full context. Complete compliance." />
+  <meta property="og:title" content="Omniq — Organizational AI Intelligence" />
+  <meta property="og:description" content="One platform. Every employee. Every task. Enterprise AI that knows your organization, protects your data, and works for everyone." />
+  <meta property="og:type" content="website" />
+  <title>Omniq — Organizational AI Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#" class="nav__logo">
+      <span class="logo-mark">Q</span>
+      <span class="logo-text">Omniq</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav__cta">
+      <a href="#contact" class="btn btn--ghost">Request Demo</a>
+      <a href="#pricing" class="btn btn--primary">Get Started</a>
+    </div>
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero__bg">
+    <div class="grid-overlay"></div>
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+  </div>
+  <div class="container">
+    <div class="hero__badge">
+      <span class="badge-dot"></span>
+      Now in Early Access — Enterprise AI for Every Team
+    </div>
+    <h1 class="hero__headline">
+      Your entire organization,<br />
+      <span class="gradient-text">intelligently connected.</span>
+    </h1>
+    <p class="hero__sub">
+      Omniq is the single AI platform every person in your organization uses to get their work done —
+      from the newest intern to the CEO. One deployment. Every employee. Zero data leaks. Complete compliance.
+    </p>
+    <div class="hero__actions">
+      <a href="#contact" class="btn btn--primary btn--lg">Request Early Access</a>
+      <a href="#how-it-works" class="btn btn--ghost btn--lg">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polygon points="10,8 16,12 10,16"/></svg>
+        See How It Works
+      </a>
+    </div>
+    <div class="hero__stats">
+      <div class="stat">
+        <span class="stat__num">35–50%</span>
+        <span class="stat__label">Reduction in overhead tasks</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat__num">3–4 wks</span>
+        <span class="stat__label">New hire ramp time (vs 8–12)</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat__num">Zero</span>
+        <span class="stat__label">Raw PII reaching any model</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat__num">100%</span>
+        <span class="stat__label">Audit trail on every interaction</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero__terminal-wrap">
+    <div class="terminal">
+      <div class="terminal__bar">
+        <span class="dot dot--red"></span>
+        <span class="dot dot--yellow"></span>
+        <span class="dot dot--green"></span>
+        <span class="terminal__title">omniq — org intelligence</span>
+      </div>
+      <div class="terminal__body" id="terminal-body">
+        <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">omniq query --context org --role manager</span></div>
+        <div class="t-line t-out">Connecting to Omniq intelligence layer...</div>
+        <div class="t-line t-out">Loading org context: <span class="t-hi">Acme Corp</span> · 847 documents indexed</div>
+        <div class="t-line t-out">Role: <span class="t-hi">MANAGER</span> · Access: HR + Engineering + Sales</div>
+        <div class="t-line t-blank"></div>
+        <div class="t-line"><span class="t-prompt">></span> <span class="t-cmd t-typing" id="typed-query"></span></div>
+        <div class="t-line t-response" id="typed-response"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROBLEMS ===== -->
+<section class="problems" id="problems">
+  <div class="container">
+    <div class="section-label">The Problem</div>
+    <h2 class="section-title">Every organization is bleeding intelligence.</h2>
+    <p class="section-sub">Companies spend billions on AI tools that don't know your business, leak your data, and help only a fraction of your team.</p>
+    <div class="problems__grid">
+      <div class="problem-card">
+        <div class="problem-card__icon">🔓</div>
+        <h3>Data leaks to external models daily</h3>
+        <p>Every ChatGPT prompt your employees send is training data for a competitor's AI. Your customer lists, strategies, and contracts — gone.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-card__icon">🧠</div>
+        <h3>AI has zero context about your org</h3>
+        <p>Generic AI can't answer "What's our Q3 strategy?" or "How does Sarah's team handle this?" Your institutional knowledge stays locked in docs no one reads.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-card__icon">⏳</div>
+        <h3>35–40% of employee time is wasted</h3>
+        <p>Searching for context, onboarding new hires, re-explaining processes. Every week, your highest-paid employees do work that AI should handle.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-card__icon">🚪</div>
+        <h3>Knowledge walks out the door</h3>
+        <p>When key employees leave, the workflow breaks. Three years of expertise in someone's head disappears in a resignation email.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-card__icon">📊</div>
+        <h3>Analysis is still manual and slow</h3>
+        <p>Questions that should take seconds take analyst hours. By the time you have the answer, the decision was already made — wrong.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-card__icon">😰</div>
+        <h3>Employees are afraid to use AI</h3>
+        <p>No one knows what's allowed, what's safe, or if they'll get in trouble. Uncertainty becomes inaction. Your AI investment sits unused.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOLUTION INTRO ===== -->
+<section class="solution-intro">
+  <div class="container">
+    <div class="solution-intro__inner">
+      <div class="big-quote">"Everyone needs an LLM. Every company needs an LLM."</div>
+      <p>Omniq is the platform that makes both true — securely, compliantly, and for every single person in your organization.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="section-label">Platform Features</div>
+    <h2 class="section-title">Eight results. One platform.</h2>
+    <p class="section-sub">Omniq doesn't add AI to your stack. It becomes the intelligence layer your entire organization runs on.</p>
+
+    <div class="features__grid">
+
+      <div class="feature-card feature-card--large">
+        <div class="feature-card__icon-wrap">
+          <div class="feature-icon">🛡️</div>
+        </div>
+        <div class="feature-card__content">
+          <div class="feature-tag">Privacy-First Architecture</div>
+          <h3>Zero raw PII reaches any model — ever.</h3>
+          <p>Our 14-category tokenization engine strips and replaces every piece of sensitive data before a single token leaves your infrastructure. Names become tokens. Customer data becomes anonymized vectors. The model sees patterns, never people.</p>
+          <ul class="feature-list">
+            <li>14-category automatic data classification</li>
+            <li>Architecture-enforced tokenization</li>
+            <li>Zero data retention by any external model</li>
+            <li>Complete re-identification on output</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🏢</div>
+        <div class="feature-tag">Org-Grounded AI</div>
+        <h3>Every response grounded in your actual reality</h3>
+        <p>Omniq indexes your documents, history, values, and current priorities. Every answer is grounded in what your organization actually knows — not generic internet knowledge.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-tag">Instant Knowledge Access</div>
+        <h3>Seconds, not hours</h3>
+        <p>New hire ramp time cut from 8–12 weeks to 3–4 weeks. Any employee can retrieve institutional knowledge instantly, in plain language.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <div class="feature-tag">Permanent Institutional Memory</div>
+        <h3>Knowledge that never leaves</h3>
+        <p>Everything ever written down is indexed permanently. Zero single-person dependencies. When someone leaves, their knowledge stays.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📈</div>
+        <div class="feature-tag">Real-Time Analytics</div>
+        <h3>Analyst-hours in seconds</h3>
+        <p>Analytical questions answered instantly with auditable calculations. Every number traceable to its source document.</p>
+      </div>
+
+      <div class="feature-card feature-card--large feature-card--right">
+        <div class="feature-card__icon-wrap">
+          <div class="feature-icon">🔍</div>
+        </div>
+        <div class="feature-card__content">
+          <div class="feature-tag">Complete Audit Trail</div>
+          <h3>Full visibility into every AI interaction.</h3>
+          <p>Complete audit trail of every interaction, every document accessed, every query made by every employee. Compliance export in seconds. No guessing what your organization's AI is doing.</p>
+          <div class="audit-demo">
+            <div class="audit-row">
+              <span class="audit-time">09:14:32</span>
+              <span class="audit-user">sarah.chen@acme</span>
+              <span class="audit-action">query</span>
+              <span class="audit-docs">3 docs accessed</span>
+            </div>
+            <div class="audit-row">
+              <span class="audit-time">09:16:01</span>
+              <span class="audit-user">james.park@acme</span>
+              <span class="audit-action">upload</span>
+              <span class="audit-docs">Q3_forecast.pdf</span>
+            </div>
+            <div class="audit-row">
+              <span class="audit-time">09:18:44</span>
+              <span class="audit-user">admin@acme</span>
+              <span class="audit-action">analytics</span>
+              <span class="audit-docs">usage report</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">✅</div>
+        <div class="feature-tag">Policy Compliance by Design</div>
+        <h3>Eliminate AI fear</h3>
+        <p>Every tool is approved, every use case is policy-compliant by architecture. Employees use AI confidently because the uncertainty is designed away.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <div class="feature-tag">Role-Specific Agents</div>
+        <h3>30–50% overhead reduction</h3>
+        <p>Purpose-built agents for each role reduce communication, documentation, and reporting overhead — so employees do their actual job.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how-it-works" id="how-it-works">
+  <div class="container">
+    <div class="section-label">Architecture</div>
+    <h2 class="section-title">How Omniq works</h2>
+    <p class="section-sub">A layered intelligence architecture that puts security and org context at every step — not bolted on at the end.</p>
+
+    <div class="flow">
+      <div class="flow__step">
+        <div class="flow__num">01</div>
+        <div class="flow__content">
+          <h3>Employee sends a request</h3>
+          <p>Any employee, any device. Natural language. No prompting skills required. Omniq understands intent in the context of their role.</p>
+        </div>
+        <div class="flow__arrow">↓</div>
+      </div>
+      <div class="flow__step">
+        <div class="flow__num">02</div>
+        <div class="flow__content">
+          <h3>Auth layer validates identity & permissions</h3>
+          <p>JWT validation and Role-Based Access Control. The employee's role determines exactly which data categories and documents they can access — enforced architecturally, not by policy alone.</p>
+          <div class="role-pills">
+            <span class="role-pill role-pill--basic">BASIC</span>
+            <span class="role-pill role-pill--pro">PRO</span>
+            <span class="role-pill role-pill--manager">MANAGER</span>
+            <span class="role-pill role-pill--admin">ADMIN</span>
+            <span class="role-pill role-pill--exec">EXECUTIVE</span>
+          </div>
+        </div>
+        <div class="flow__arrow">↓</div>
+      </div>
+      <div class="flow__step">
+        <div class="flow__num">03</div>
+        <div class="flow__content">
+          <h3>RAG engine retrieves relevant org context</h3>
+          <p>Access-filtered vector search across your indexed documents. Only content the employee is authorized to see is retrieved. Semantic search, not keyword matching.</p>
+        </div>
+        <div class="flow__arrow">↓</div>
+      </div>
+      <div class="flow__step">
+        <div class="flow__num">04</div>
+        <div class="flow__content">
+          <h3>PII tokenization before any model call</h3>
+          <p>14-category tokenizer strips all sensitive data. Customer names become tokens. Financial figures are anonymized. The model context is clean — organizationally rich but personally anonymized.</p>
+        </div>
+        <div class="flow__arrow">↓</div>
+      </div>
+      <div class="flow__step">
+        <div class="flow__num">05</div>
+        <div class="flow__content">
+          <h3>LLM generates a grounded, accurate response</h3>
+          <p>Claude processes org context + retrieved knowledge and generates an answer grounded in your actual documents, values, and current priorities.</p>
+        </div>
+        <div class="flow__arrow">↓</div>
+      </div>
+      <div class="flow__step">
+        <div class="flow__num">06</div>
+        <div class="flow__content">
+          <h3>Response delivered + interaction logged</h3>
+          <p>The employee gets their answer. Every detail of the interaction — query, documents accessed, model used, response — is written to the immutable audit log.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECURITY ===== -->
+<section class="security" id="security">
+  <div class="container">
+    <div class="security__inner">
+      <div class="security__text">
+        <div class="section-label">Security & Compliance</div>
+        <h2 class="section-title">Built for enterprises that can't afford a breach.</h2>
+        <p>Security isn't a feature in Omniq — it's the architecture. Every decision in the stack was made to ensure data never leaves without control, and every action is accountable.</p>
+        <div class="security__points">
+          <div class="security-point">
+            <div class="security-point__check">✓</div>
+            <div>
+              <strong>Zero-trust data flow</strong>
+              <p>No raw employee data, customer PII, or proprietary content ever reaches an external model in identifiable form.</p>
+            </div>
+          </div>
+          <div class="security-point">
+            <div class="security-point__check">✓</div>
+            <div>
+              <strong>Role-based access, enforced architecturally</strong>
+              <p>RBAC and ABAC enforced at the data layer, not the UI layer. You can't accidentally show an intern the board's financials.</p>
+            </div>
+          </div>
+          <div class="security-point">
+            <div class="security-point__check">✓</div>
+            <div>
+              <strong>Immutable audit log</strong>
+              <p>Every query, document access, and response logged with timestamp, user, and role. Compliance export in under 30 seconds.</p>
+            </div>
+          </div>
+          <div class="security-point">
+            <div class="security-point__check">✓</div>
+            <div>
+              <strong>On-premises or private cloud</strong>
+              <p>Deploy in your infrastructure. Your data never touches Omniq's servers — only the intelligence layer runs in our stack.</p>
+            </div>
+          </div>
+          <div class="security-point">
+            <div class="security-point__check">✓</div>
+            <div>
+              <strong>Compliance-ready by default</strong>
+              <p>GDPR, HIPAA, SOC 2, and CCPA compliance built into the architecture — not added as an afterthought.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="security__visual">
+        <div class="security-stack">
+          <div class="stack-layer stack-layer--top">
+            <span class="stack-icon">👤</span>
+            <span>Employee Request</span>
+          </div>
+          <div class="stack-connector">
+            <div class="connector-label">JWT + RBAC validation</div>
+          </div>
+          <div class="stack-layer">
+            <span class="stack-icon">🔐</span>
+            <span>Auth &amp; Access Control</span>
+          </div>
+          <div class="stack-connector">
+            <div class="connector-label">Access-filtered vector search</div>
+          </div>
+          <div class="stack-layer">
+            <span class="stack-icon">🔎</span>
+            <span>RAG Engine + ChromaDB</span>
+          </div>
+          <div class="stack-connector">
+            <div class="connector-label">14-category PII tokenization</div>
+          </div>
+          <div class="stack-layer">
+            <span class="stack-icon">🤖</span>
+            <span>LLM Gateway → Claude</span>
+          </div>
+          <div class="stack-connector">
+            <div class="connector-label">Immutable audit write</div>
+          </div>
+          <div class="stack-layer stack-layer--bottom">
+            <span class="stack-icon">📋</span>
+            <span>Audit Log</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ROLES ===== -->
+<section class="roles" id="roles">
+  <div class="container">
+    <div class="section-label">Role Intelligence</div>
+    <h2 class="section-title">Different roles. Purpose-built intelligence.</h2>
+    <p class="section-sub">Omniq adapts to every person in your organization. Each role gets exactly the access, tools, and context they need — and nothing they shouldn't have.</p>
+    <div class="roles__tabs">
+      <div class="roles__tab-list">
+        <button class="tab-btn tab-btn--active" data-tab="basic">Basic User</button>
+        <button class="tab-btn" data-tab="pro">Pro Tier</button>
+        <button class="tab-btn" data-tab="manager">Manager</button>
+        <button class="tab-btn" data-tab="admin">Admin</button>
+        <button class="tab-btn" data-tab="executive">Executive</button>
+      </div>
+      <div class="roles__tab-content">
+        <div class="tab-panel tab-panel--active" id="tab-basic">
+          <div class="role-detail">
+            <div class="role-detail__badge role-badge--basic">BASIC</div>
+            <h3>General Queries &amp; Personal Productivity</h3>
+            <p>Every employee has access to Omniq from day one. New hires ramp in 3–4 weeks instead of 3 months. Every person gets an AI that knows your company's policies, products, and culture.</p>
+            <ul>
+              <li>General org queries — policies, products, culture</li>
+              <li>Personal document workspace</li>
+              <li>All-employees knowledge category</li>
+              <li>Meeting prep and summary generation</li>
+              <li>Email and communication drafting</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-panel" id="tab-pro">
+          <div class="role-detail">
+            <div class="role-detail__badge role-badge--pro">PRO</div>
+            <h3>Advanced Access for Power Users</h3>
+            <p>Engineers, salespeople, and senior contributors get expanded data access and the ability to upload and index new documents into the org knowledge base.</p>
+            <ul>
+              <li>Engineering &amp; Sales data categories</li>
+              <li>Document upload and org indexing</li>
+              <li>Advanced code and technical queries</li>
+              <li>Sales intelligence and prospect research</li>
+              <li>Cross-department knowledge synthesis</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-panel" id="tab-manager">
+          <div class="role-detail">
+            <div class="role-detail__badge role-badge--manager">MANAGER</div>
+            <h3>Team Intelligence &amp; HR Visibility</h3>
+            <p>Managers get the data they need to lead effectively — team analytics, HR context, and performance intelligence — without an analyst in the loop.</p>
+            <ul>
+              <li>HR data access for their team</li>
+              <li>Team analytics and performance insights</li>
+              <li>Usage analytics for their department</li>
+              <li>Headcount and capacity planning queries</li>
+              <li>1:1 prep and feedback drafting</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-panel" id="tab-admin">
+          <div class="role-detail">
+            <div class="role-detail__badge role-badge--admin">ADMIN</div>
+            <h3>Full Control &amp; User Management</h3>
+            <p>IT and operations administrators get complete visibility, user management, and the ability to shape how Omniq is deployed across the organization.</p>
+            <ul>
+              <li>Full data access across all categories</li>
+              <li>User provisioning and role assignment</li>
+              <li>Raw audit log access and export</li>
+              <li>System configuration and org settings</li>
+              <li>Compliance reporting and data governance</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-panel" id="tab-executive">
+          <div class="role-detail">
+            <div class="role-detail__badge role-badge--exec">EXECUTIVE</div>
+            <h3>Org-Wide Intelligence for Leadership</h3>
+            <p>Executives get the complete picture — org-wide analytics, strategic document access, and AI-powered synthesis across every department and data category.</p>
+            <ul>
+              <li>Everything across all data categories</li>
+              <li>Org-wide analytics and trends</li>
+              <li>Board-level reporting and synthesis</li>
+              <li>Cross-functional strategic analysis</li>
+              <li>Executive briefing generation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-label">Early Access</div>
+    <h2 class="section-title">What early customers say</h2>
+    <div class="testimonials__grid">
+      <div class="testimonial-card">
+        <div class="testimonial-card__quote">"We deployed Omniq for our 200-person engineering org. New engineers are productive in week one, not week eight. The ROI was immediate and measurable."</div>
+        <div class="testimonial-card__author">
+          <div class="author-avatar">MK</div>
+          <div>
+            <strong>Marcus K.</strong>
+            <span>VP Engineering, Series B SaaS</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-card__quote">"Our compliance team was terrified of AI. Omniq's audit trail and architecture-level privacy controls gave them exactly what they needed to approve company-wide rollout."</div>
+        <div class="testimonial-card__author">
+          <div class="author-avatar">LR</div>
+          <div>
+            <strong>Linda R.</strong>
+            <span>Chief Compliance Officer, Financial Services</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-card__quote">"I asked it about our Q2 performance against targets, our top customers by segment, and our biggest support issues — all in one conversation. It answered in seconds with citations."</div>
+        <div class="testimonial-card__author">
+          <div class="author-avatar">DT</div>
+          <div>
+            <strong>David T.</strong>
+            <span>CEO, 150-person consulting firm</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-label">Pricing</div>
+    <h2 class="section-title">Simple, transparent pricing.</h2>
+    <p class="section-sub">One price per employee. No seat limits on certain features. No usage caps that penalize adoption.</p>
+    <div class="pricing__grid">
+
+      <div class="pricing-card">
+        <div class="pricing-card__tier">Starter</div>
+        <div class="pricing-card__price">
+          <span class="price-num">$12</span>
+          <span class="price-per">/ employee / month</span>
+        </div>
+        <p class="pricing-card__desc">For teams of 10–50 people getting started with organizational AI.</p>
+        <ul class="pricing-card__features">
+          <li>Up to 50 employees</li>
+          <li>5,000 documents indexed</li>
+          <li>Basic + Pro role tiers</li>
+          <li>Standard audit logging</li>
+          <li>Email support</li>
+          <li>Shared cloud deployment</li>
+        </ul>
+        <a href="#contact" class="btn btn--ghost btn--full">Get Started</a>
+      </div>
+
+      <div class="pricing-card pricing-card--featured">
+        <div class="pricing-card__badge">Most Popular</div>
+        <div class="pricing-card__tier">Growth</div>
+        <div class="pricing-card__price">
+          <span class="price-num">$22</span>
+          <span class="price-per">/ employee / month</span>
+        </div>
+        <p class="pricing-card__desc">For scaling organizations that need full role intelligence and analytics.</p>
+        <ul class="pricing-card__features">
+          <li>Up to 500 employees</li>
+          <li>50,000 documents indexed</li>
+          <li>All role tiers including Manager</li>
+          <li>Full audit trail + compliance export</li>
+          <li>Usage analytics dashboard</li>
+          <li>Priority support</li>
+          <li>Private cloud deployment</li>
+          <li>SSO / SAML integration</li>
+        </ul>
+        <a href="#contact" class="btn btn--primary btn--full">Request Demo</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-card__tier">Enterprise</div>
+        <div class="pricing-card__price">
+          <span class="price-num">Custom</span>
+        </div>
+        <p class="pricing-card__desc">For large organizations with custom security, compliance, and deployment requirements.</p>
+        <ul class="pricing-card__features">
+          <li>Unlimited employees</li>
+          <li>Unlimited documents</li>
+          <li>All role tiers including Executive</li>
+          <li>On-premises deployment option</li>
+          <li>Custom data retention policies</li>
+          <li>Dedicated success manager</li>
+          <li>SLA guarantees</li>
+          <li>Custom compliance reporting</li>
+          <li>White-labeling available</li>
+        </ul>
+        <a href="#contact" class="btn btn--ghost btn--full">Talk to Sales</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESULTS ===== -->
+<section class="results" id="results">
+  <div class="container">
+    <div class="section-label">Measurable Impact</div>
+    <h2 class="section-title">Results you can put in a board deck.</h2>
+    <div class="results__grid">
+      <div class="result-item">
+        <div class="result-item__metric">8–12 wks → 3–4 wks</div>
+        <div class="result-item__label">New employee ramp time</div>
+      </div>
+      <div class="result-item">
+        <div class="result-item__metric">35–50%</div>
+        <div class="result-item__label">Reduction in communication &amp; reporting overhead</div>
+      </div>
+      <div class="result-item">
+        <div class="result-item__metric">Seconds</div>
+        <div class="result-item__label">vs. analyst hours for data queries</div>
+      </div>
+      <div class="result-item">
+        <div class="result-item__metric">Zero</div>
+        <div class="result-item__label">Raw PII reaching any external model</div>
+      </div>
+      <div class="result-item">
+        <div class="result-item__metric">100%</div>
+        <div class="result-item__label">Audit coverage on every interaction</div>
+      </div>
+      <div class="result-item">
+        <div class="result-item__metric">Day 1</div>
+        <div class="result-item__label">Full org knowledge available to every new hire</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-section__inner">
+      <h2>Your org's intelligence, finally organized.</h2>
+      <p>Deploy once. Every employee uses it every day. No data ever leaves uncontrolled. No institutional knowledge ever lost.</p>
+      <div class="cta-section__actions">
+        <a href="#contact" class="btn btn--primary btn--lg">Request Early Access</a>
+        <a href="#how-it-works" class="btn btn--ghost btn--lg">See the Architecture</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact__inner">
+      <div class="contact__text">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Ready to deploy Omniq?</h2>
+        <p>We work directly with each new customer during onboarding. Tell us about your organization and we'll show you exactly what Omniq looks like for your team.</p>
+        <div class="contact__info">
+          <div class="contact-info-item">
+            <span>📍</span>
+            <span>San Francisco, CA</span>
+          </div>
+          <div class="contact-info-item">
+            <span>📧</span>
+            <span>hello@omniq.ai</span>
+          </div>
+          <div class="contact-info-item">
+            <span>🕐</span>
+            <span>Response within 24 hours</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact__form-wrap">
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" placeholder="Acme Corp" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Work Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@acme.com" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="size">Team Size</label>
+              <select id="size" name="size">
+                <option value="">Select...</option>
+                <option>10–50 employees</option>
+                <option>50–200 employees</option>
+                <option>200–500 employees</option>
+                <option>500–2,000 employees</option>
+                <option>2,000+ employees</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="interest">Primary Interest</label>
+              <select id="interest" name="interest">
+                <option value="">Select...</option>
+                <option>Data privacy / compliance</option>
+                <option>Employee onboarding</option>
+                <option>Knowledge management</option>
+                <option>Analytics &amp; reporting</option>
+                <option>Full platform deployment</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about your use case</label>
+            <textarea id="message" name="message" rows="4" placeholder="What's the biggest AI problem you're trying to solve?"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Request Early Access →</button>
+          <p class="form-note">No spam. No sales blitz. A human will respond within 24 hours.</p>
+        </form>
+        <div class="form-success" id="form-success" style="display:none;">
+          <div class="success-icon">✓</div>
+          <h3>We've got your request.</h3>
+          <p>A member of our team will be in touch within 24 hours to schedule your personalized demo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="#" class="nav__logo">
+          <span class="logo-mark">Q</span>
+          <span class="logo-text">Omniq</span>
+        </a>
+        <p>The AI platform every person in your organization actually uses.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#how-it-works">Architecture</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#testimonials">Customers</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Security Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Omniq. All rights reserved. Built with enterprise security at the foundation.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
