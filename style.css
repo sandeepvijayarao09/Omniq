@@ -1022,7 +1022,7 @@ ul { list-style: none; }
 }
 
 .testimonial-card__quote::before {
-  content: '"';
+  content: '“';
   position: absolute;
   top: 0; left: 0;
   font-size: 48px;
