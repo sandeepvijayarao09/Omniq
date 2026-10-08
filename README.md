@@ -1,50 +1,46 @@
 # Omniq
 
-> One app. Every person. Every task. Every organization.
+A single-page concept site for **Omniq**, an idea for an enterprise AI layer that sits between employees and LLMs: it grounds answers in company context, tokenizes sensitive data before any model call, enforces role-based access and logs every interaction.
 
-A single-page marketing site for **Omniq**, a concept for an enterprise AI platform positioned as a controlled interface between employees and large language models — privacy-first, role-aware, and fully auditable.
+**Live:** https://sandeepvijayarao09.github.io/Omniq/
 
-## Overview
+![Omniq landing page](docs/screenshot.png)
 
-This repository contains the static landing page for Omniq. It presents the product concept: an organization-wide AI layer that grounds answers in internal context, tokenizes sensitive data before any model call, enforces role-based access, and logs every interaction to an immutable audit trail.
+> **Concept only.** Omniq is not a company or a shipping product. Every metric, price and "result" on the page is illustrative, and the page says so in a banner at the top. There is no backend: the contact form opens a pre-filled email draft and stores nothing.
 
-The site is built as a self-contained static page (HTML, CSS, vanilla JavaScript) with no build step or framework.
+## Highlights
 
-## Features
+- Static HTML, CSS and vanilla JavaScript. No framework, no build step, no dependencies.
+- Responsive layout with a sticky nav, mobile menu and active-section highlighting.
+- Animated hero terminal that types through a sample org-intelligence query.
+- Interactive role tabs (Basic, Pro, Manager, Admin, Executive).
+- Scroll-triggered fade-ins via `IntersectionObserver`.
+- Sections for the problem, features, request flow, security model, role tiers, an illustrative pricing model and target outcomes.
 
-- Single-page responsive landing site with sticky navigation and a mobile menu
-- Animated hero terminal that types through sample org-intelligence queries
-- Sections for the problem statement, platform features, architecture flow, security, role-based access tiers, pricing, and results
-- Interactive role tabs (Basic, Pro, Manager, Admin, Executive)
-- Scroll-triggered fade-in animations via `IntersectionObserver`
-- Active-section highlighting in the nav as you scroll
-- Contact form that opens a prefilled `mailto:` draft on submit
-
-## Tech Stack
-
-- HTML5
-- CSS3 (custom design system, Google Fonts: Inter, JetBrains Mono, Lora)
-- Vanilla JavaScript (no dependencies, no bundler)
-
-## Project Structure
-
-```
-index.html   -- Page markup and all content sections
-style.css    -- Styling and design system
-main.js      -- Nav behavior, role tabs, scroll animations, terminal typing, contact form
-```
-
-## Running Locally
-
-No build step is required. Serve the directory with any static file server, for example:
+## Run locally
 
 ```bash
+git clone https://github.com/sandeepvijayarao09/Omniq.git
+cd Omniq
 python3 -m http.server 8000
-# then open http://localhost:8000
+# open http://localhost:8000
 ```
 
-Or simply open `index.html` directly in a browser.
+Opening `index.html` directly in a browser also works.
 
-## Notes
+## Project structure
 
-The metrics, pricing, and product claims on the page describe a conceptual product and are illustrative. This repository is the front-end marketing site only.
+```
+index.html          Page markup and all content sections
+style.css           Design tokens, layout and components
+main.js             Nav, role tabs, scroll animations, terminal typing, contact form
+docs/screenshot.png README screenshot
+```
+
+## Deployment
+
+GitHub Pages serves the `main` branch from the repository root. Pushing to `main` updates the live site.
+
+## License
+
+[MIT](LICENSE)
