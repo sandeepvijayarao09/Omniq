@@ -1,5 +1,7 @@
 # Omniq
 
+[![Link check](https://github.com/sandeepvijayarao09/Omniq/actions/workflows/links.yml/badge.svg)](https://github.com/sandeepvijayarao09/Omniq/actions/workflows/links.yml)
+
 A single-page concept site for **Omniq**, an idea for an enterprise AI layer that sits between employees and LLMs: it grounds answers in company context, tokenizes sensitive data before any model call, enforces role-based access and logs every interaction.
 
 **Live:** https://sandeepvijayarao09.github.io/Omniq/
