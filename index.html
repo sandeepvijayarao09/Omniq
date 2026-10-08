@@ -14,10 +14,15 @@
 </head>
 <body>
 
+<!-- ===== CONCEPT BANNER ===== -->
+<div class="concept-banner" role="note">
+  <strong>Concept:</strong> illustrative numbers. Omniq is a product concept, not a shipping product. Metrics, pricing and results on this page are illustrative.
+</div>
+
 <!-- ===== NAV ===== -->
 <nav class="nav" id="nav">
   <div class="nav__inner">
-    <a href="#" class="nav__logo">
+    <a href="#hero" class="nav__logo">
       <span class="logo-mark">Q</span>
       <span class="logo-text">Omniq</span>
     </a>
@@ -29,8 +34,8 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav__cta">
-      <a href="#contact" class="btn btn--ghost">Request Demo</a>
-      <a href="#pricing" class="btn btn--primary">Get Started</a>
+      <a href="#how-it-works" class="btn btn--ghost">How It Works</a>
+      <a href="#contact" class="btn btn--primary">Get in Touch</a>
     </div>
     <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -47,62 +52,64 @@
     <div class="orb orb--3"></div>
   </div>
   <div class="container">
-    <div class="hero__badge">
-      <span class="badge-dot"></span>
-      Now in Early Access — Enterprise AI for Every Team
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="badge-dot"></span>
+        Product concept — Enterprise AI for Every Team
+      </div>
+      <h1 class="hero__headline">
+        One app. Every person.<br />
+        <span class="gradient-text">Every task. Every org.</span>
+      </h1>
+      <p class="hero__sub">
+        Not a chatbot. Not a copilot bolted onto one tool. One app that knows your organization, knows your role, and gives every employee the exact intelligence they need — privately, safely, and in full view of leadership.
+      </p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary btn--lg">Share Feedback</a>
+        <a href="#how-it-works" class="btn btn--ghost btn--lg">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polygon points="10,8 16,12 10,16"/></svg>
+          See How It Works
+        </a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__num">35–50%</span>
+          <span class="stat__label">Reduction in overhead tasks</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat__num">3–4 wks</span>
+          <span class="stat__label">New hire ramp time (vs 8–12)</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat__num">Zero</span>
+          <span class="stat__label">Raw PII reaching any model</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat__num">100%</span>
+          <span class="stat__label">Audit trail on every interaction</span>
+        </div>
+      </div>
     </div>
-    <h1 class="hero__headline">
-      One app. Every person.<br />
-      <span class="gradient-text">Every task. Every org.</span>
-    </h1>
-    <p class="hero__sub">
-      Not a chatbot. Not a copilot bolted onto one tool. One app that knows your organization, knows your role, and gives every employee the exact intelligence they need — privately, safely, and in full view of leadership.
-    </p>
-    <div class="hero__actions">
-      <a href="#contact" class="btn btn--primary btn--lg">Request Early Access</a>
-      <a href="#how-it-works" class="btn btn--ghost btn--lg">
-        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polygon points="10,8 16,12 10,16"/></svg>
-        See How It Works
-      </a>
-    </div>
-    <div class="hero__stats">
-      <div class="stat">
-        <span class="stat__num">35–50%</span>
-        <span class="stat__label">Reduction in overhead tasks</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat__num">3–4 wks</span>
-        <span class="stat__label">New hire ramp time (vs 8–12)</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat__num">Zero</span>
-        <span class="stat__label">Raw PII reaching any model</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat__num">100%</span>
-        <span class="stat__label">Audit trail on every interaction</span>
-      </div>
-    </div>
-  </div>
-  <div class="hero__terminal-wrap">
-    <div class="terminal">
-      <div class="terminal__bar">
-        <span class="dot dot--red"></span>
-        <span class="dot dot--yellow"></span>
-        <span class="dot dot--green"></span>
-        <span class="terminal__title">omniq — org intelligence</span>
-      </div>
-      <div class="terminal__body" id="terminal-body">
-        <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">omniq query --context org --role manager</span></div>
-        <div class="t-line t-out">Connecting to Omniq intelligence layer...</div>
-        <div class="t-line t-out">Loading org context: <span class="t-hi">Your Org</span> · 847 documents indexed</div>
-        <div class="t-line t-out">Role: <span class="t-hi">MANAGER</span> · Access: HR + Engineering + Sales</div>
-        <div class="t-line t-blank"></div>
-        <div class="t-line"><span class="t-prompt">></span> <span class="t-cmd t-typing" id="typed-query"></span></div>
-        <div class="t-line t-response" id="typed-response"></div>
+    <div class="hero__terminal-wrap">
+      <div class="terminal">
+        <div class="terminal__bar">
+          <span class="dot dot--red"></span>
+          <span class="dot dot--yellow"></span>
+          <span class="dot dot--green"></span>
+          <span class="terminal__title">omniq — org intelligence</span>
+        </div>
+        <div class="terminal__body" id="terminal-body">
+          <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">omniq query --context org --role manager</span></div>
+          <div class="t-line t-out">Connecting to Omniq intelligence layer...</div>
+          <div class="t-line t-out">Loading org context: <span class="t-hi">Your Org</span> · 847 documents indexed</div>
+          <div class="t-line t-out">Role: <span class="t-hi">MANAGER</span> · Access: HR + Engineering + Sales</div>
+          <div class="t-line t-blank"></div>
+          <div class="t-line"><span class="t-prompt">></span> <span class="t-cmd t-typing" id="typed-query"></span></div>
+          <div class="t-line t-response" id="typed-response"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -519,8 +526,8 @@
 <section class="pricing" id="pricing">
   <div class="container">
     <div class="section-label">Pricing</div>
-    <h2 class="section-title">Simple, transparent pricing.</h2>
-    <p class="section-sub">Per-seat SaaS. Annual contracts. Usage-based expansion. The platform becomes more valuable every month — and the switching cost of leaving grows with it.</p>
+    <h2 class="section-title">Illustrative pricing model.</h2>
+    <p class="section-sub">A sketch of how the concept could be packaged, not an offer. Per-seat SaaS. Annual contracts. Usage-based expansion. The platform becomes more valuable every month — and the switching cost of leaving grows with it.</p>
     <div class="pricing__grid">
 
       <div class="pricing-card">
@@ -539,7 +546,7 @@
           <li>Email support</li>
           <li>Shared cloud deployment</li>
         </ul>
-        <a href="#contact" class="btn btn--ghost btn--full">Get Started</a>
+        <a href="#contact" class="btn btn--ghost btn--full">Discuss</a>
       </div>
 
       <div class="pricing-card pricing-card--featured">
@@ -560,7 +567,7 @@
           <li>Private cloud deployment</li>
           <li>SSO / SAML integration</li>
         </ul>
-        <a href="#contact" class="btn btn--primary btn--full">Request Demo</a>
+        <a href="#contact" class="btn btn--primary btn--full">Discuss</a>
       </div>
 
       <div class="pricing-card">
@@ -579,7 +586,7 @@
           <li>Custom compliance reporting</li>
           <li>White-labeling available</li>
         </ul>
-        <a href="#contact" class="btn btn--ghost btn--full">Talk to Sales</a>
+        <a href="#contact" class="btn btn--ghost btn--full">Discuss</a>
       </div>
 
     </div>
@@ -589,8 +596,9 @@
 <!-- ===== RESULTS ===== -->
 <section class="results" id="results">
   <div class="container">
-    <div class="section-label">Measurable Impact</div>
-    <h2 class="section-title">Results you can put in a board deck.</h2>
+    <div class="section-label">Target Outcomes</div>
+    <h2 class="section-title">What the concept is designed to move.</h2>
+    <p class="section-sub">Illustrative targets, not measured results.</p>
     <div class="results__grid">
       <div class="result-item">
         <div class="result-item__metric">8–12 wks → 3–4 wks</div>
@@ -627,7 +635,7 @@
       <h2>The organization built on Omniq gets smarter every month.</h2>
       <p>Deploy once. Every employee uses it every day. No data ever leaves uncontrolled. No institutional knowledge ever lost. The gap between you and organizations that don't have it widens every month.</p>
       <div class="cta-section__actions">
-        <a href="#contact" class="btn btn--primary btn--lg">Request Early Access</a>
+        <a href="#contact" class="btn btn--primary btn--lg">Share Feedback</a>
         <a href="#how-it-works" class="btn btn--ghost btn--lg">See the Architecture</a>
       </div>
     </div>
@@ -640,8 +648,8 @@
     <div class="contact__inner">
       <div class="contact__text">
         <div class="section-label">Get In Touch</div>
-        <h2 class="section-title">Ready to deploy Omniq?</h2>
-        <p>We work directly with each new customer during onboarding. Tell us about your organization and we'll show you exactly what Omniq looks like for your team.</p>
+        <h2 class="section-title">Interested in the idea?</h2>
+        <p>Omniq is a concept I'm exploring. If the problem resonates with your organization, or you have feedback on the approach, I'd like to hear from you.</p>
         <div class="contact__info">
           <div class="contact-info-item">
             <span>📍</span>
@@ -650,10 +658,6 @@
           <div class="contact-info-item">
             <span>📧</span>
             <span>sandeepvijayarao09@gmail.com</span>
-          </div>
-          <div class="contact-info-item">
-            <span>🕐</span>
-            <span>Response within 24 hours</span>
           </div>
         </div>
       </div>
@@ -701,13 +705,13 @@
             <label for="message">Tell us about your use case</label>
             <textarea id="message" name="message" rows="4" placeholder="What's the biggest AI problem you're trying to solve?"></textarea>
           </div>
-          <button type="submit" class="btn btn--primary btn--full">Request Early Access →</button>
-          <p class="form-note">No spam. No sales blitz. A human will respond within 24 hours.</p>
+          <button type="submit" class="btn btn--primary btn--full">Send Message →</button>
+          <p class="form-note">Nothing is stored. Submitting opens a pre-filled draft in your email app.</p>
         </form>
         <div class="form-success" id="form-success" style="display:none;">
           <div class="success-icon">✓</div>
-          <h3>We've got your request.</h3>
-          <p>A member of our team will be in touch within 24 hours to schedule your personalized demo.</p>
+          <h3>Your email draft is ready.</h3>
+          <p>Your email app should have opened with the message filled in. Send it from there.</p>
         </div>
       </div>
     </div>
@@ -719,7 +723,7 @@
   <div class="container">
     <div class="footer__top">
       <div class="footer__brand">
-        <a href="#" class="nav__logo">
+        <a href="#hero" class="nav__logo">
           <span class="logo-mark">Q</span>
           <span class="logo-text">Omniq</span>
         </a>
@@ -742,17 +746,16 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Legal</h4>
+          <h4>About</h4>
           <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Security Policy</a></li>
+            <li><a href="https://github.com/sandeepvijayarao09/Omniq">Source on GitHub</a></li>
+            <li><a href="https://github.com/sandeepvijayarao09">Sandeep Vijayarao</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
-      <p>© 2026 Omniq. All rights reserved. Built with enterprise security at the foundation.</p>
+      <p>© 2026 Sandeep Vijayarao. Omniq is a product concept; all figures are illustrative. This site collects no data.</p>
     </div>
   </div>
 </footer>

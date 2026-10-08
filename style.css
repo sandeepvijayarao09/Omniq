@@ -29,6 +29,7 @@
   --font-serif: 'Lora', 'Iowan Old Style', Georgia, serif;
   --font-mono:  'JetBrains Mono', monospace;
   --nav-h:      72px;
+  --banner-h:   36px;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -140,9 +141,33 @@ body {
 }
 
 /* ── Navigation ──────────────────────────────────────────────────── */
-.nav {
+.concept-banner {
   position: fixed;
   top: 0; left: 0; right: 0;
+  height: var(--banner-h);
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  background: var(--c-house);
+  color: var(--c-text-white);
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.concept-banner strong {
+  color: var(--c-gold);
+  margin-right: 6px;
+}
+
+.nav {
+  position: fixed;
+  top: var(--banner-h); left: 0; right: 0;
   height: var(--nav-h);
   background: var(--c-white);
   display: flex;
@@ -243,7 +268,7 @@ body {
 /* ── Hero ─────────────────────────────────────────────────────────── */
 .hero {
   background: var(--c-canvas);
-  padding: calc(var(--nav-h) + 64px) 0 64px;
+  padding: calc(var(--banner-h) + var(--nav-h) + 64px) 0 64px;
   position: relative;
   overflow: hidden;
 }
@@ -258,6 +283,11 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 56px;
   align-items: center;
+}
+
+.hero__content,
+.hero__terminal-wrap {
+  min-width: 0;
 }
 
 .hero__badge {
@@ -1460,7 +1490,7 @@ body {
   .nav__links {
     display: none;
     position: fixed;
-    top: var(--nav-h);
+    top: calc(var(--banner-h) + var(--nav-h));
     left: 0; right: 0;
     background: var(--c-white);
     flex-direction: column;
@@ -1486,4 +1516,11 @@ body {
   .hero__actions   { flex-direction: column; align-items: flex-start; }
   .solution__features { gap: 20px; flex-direction: column; }
   .footer__links   { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  :root { --banner-h: 66px; }
+  .features__grid { grid-template-columns: minmax(0, 1fr); }
+  .feature-card { min-width: 0; overflow-wrap: anywhere; }
+  .concept-banner { display: block; white-space: normal; font-size: 0.75rem; padding-top: 8px; }
 }

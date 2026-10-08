@@ -98,7 +98,7 @@ form.addEventListener('submit', e => {
   const interest = document.getElementById('interest').value;
   const message  = document.getElementById('message').value;
 
-  const subject = encodeURIComponent(`Omniq Demo Request — ${company}`);
+  const subject = encodeURIComponent(`Omniq: note from ${company}`);
   const body    = encodeURIComponent(
     `Name: ${name}\nCompany: ${company}\nEmail: ${email}\nTeam Size: ${size}\nInterest: ${interest}\n\nMessage:\n${message}`
   );
@@ -115,7 +115,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     const target = document.querySelector(a.getAttribute('href'));
     if (!target) return;
     e.preventDefault();
-    const top = target.getBoundingClientRect().top + window.scrollY - 80;
+    const top = target.getBoundingClientRect().top + window.scrollY - 116;
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
